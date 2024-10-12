@@ -1,0 +1,776 @@
+/*Aqui é o BODY do site, o corpo em si. Mexa aqui para alterar
+algo sobre o site, como o fundo por exemplo.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+html,
+body {
+  background-color: #020e20; /* 020E20 */ /* e9e7e3 */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%vw;
+  height: 100%;
+}
+
+/* CSS da Barra de navegação em si. Altere aqui para alterar algo sobre a barra */
+.navbar {
+  margin-top: 30px; /*Dimensões da barra */
+  margin-left: 160px; /*Dimensões da barra */
+  margin-right: 160px; /*Dimensões da barra */
+  display: flex; /* Utiliza flexbox para alinhamento */
+  justify-content: space-between; /* Espaça os itens igualmente entre os extremos */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+  background-color: #333; /* Cor de fundo da barra de navegação */
+  padding: 15px 20px; /* Espaçamento interno da barra */
+  background-color: #bad8ff; /* Cor da barra de
+     navegação */
+  border-radius: 15px 15px; /* Código para arredondar a borda da barra*/
+}
+/*Posicionamento da lista ul (Cursos, suporte, etc ). Se alterar
+algo aqui, irá mexer no posicionamento dessa lista.*/
+.nav-menu ul {
+  display: flex; /* Exibe itens de lista em linha */
+  list-style-type: none; /* Remove marcadores dos itens da lista */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  justify-content: center; /* Centraliza os itens horizontalmente dentro da nav-menu */
+  margin-left: 37px;
+}
+/*Cor do texto da lista ( Contatos, Suporte, Cursos ). Se alterar
+algo aqui, irá alterar a cor do texto, ou fonte, etc desses 3 citados*/
+.nav-menu a {
+  color: #eeeff0; /* Cor do texto dos links na navegação */
+  text-decoration: none; /*Remove sublinhado */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  text-shadow: 2px 2px 4px rgb(168, 168, 168);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Estilo e posicionamento de entrada e registro na barra */
+.entrada-links {
+  display: flex; /* Utiliza Flexbox para alinhar os links */
+  margin-right: 23.55px; /* Empurra os links para a esquerda */
+  align-items: center; /* Alinha verticalmente os itens no centro */
+}
+
+/* Adiciona espaço entre os links de entrada e registro */
+.entrada-links a {
+  color: #eeeff0; /* Botão branco no Entrar e registrar */
+  text-decoration: none; /* Remove sublinhado */
+  margin-left: 45px;
+  font-weight: bold; /* Define o peso da fonte como negrito */
+  text-shadow: 2px 2px 4px rgb(168, 168, 168);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 5px 10px; /* Espaço interno (padding) */
+}
+/*Estética associada ao botão de Cadastrar, por ter bordas e ser diferente, no CSS foi importada uma classe só pra ajustar ele*/
+.registrar-link {
+  padding: 5px 30px; /* Espaçamento interno (padding) do contorno */
+  border: 15px #06377e;
+  border-radius: 15px; /* Bordas arredondadas */
+  background-color: #06377e; /* Cor de fundo para destacar o contorno */
+  color: #007bff; /* Cor do texto igual à cor do contorno */
+  box-shadow: 2px 2px 4px rgb(168, 168, 168); /*Sombra para a box */
+  border-width: 5px 0; /* Largura da borda: 3px horizontal, 0 vertical */
+}
+
+/* Ajusta o posicionamento do contêiner dos links de entrada e registro */
+.navbar > .entrada-links {
+  margin-left: 0; /* Remove o espaço extra à esquerda do contêiner */
+}
+
+.logo img {
+  max-height: 50px; /* Altura máxima da logo */
+}
+
+/* Estilo da navegação principal */
+.nav-menu li {
+  margin: 0 20px; /* Espaçamento horizontal entre os itens */
+}
+
+/* ---------------------------AQUI COMEÇA A SECTION 1:-----------------*/
+.imagem-conteiner {
+  position: relative; /* Permite que elementos filhos sejam posicionados de forma absoluta em relação a este contêiner */
+  width: 90vw; /* Define a largura do contêiner como 90% da largura da viewport (tela). Ajusta o tamanho para ser um pouco menor que a largura total da tela */
+  height: 700px; /* Define a altura do contêiner como 514.40 pixels */
+  margin: 59px auto 0; /* Define uma margem superior de 59px e centraliza horizontalmente o contêiner (margem automática nos lados esquerdo e direito) */
+  display: flex; /* Define o contêiner como um elemento flexível, o que permite o alinhamento flexível de seus filhos */
+  overflow: hidden; /* Garante que qualquer conteúdo que ultrapasse os limites do contêiner não seja exibido */
+  background-color: #bad8ff; /* Define a cor de fundo do contêiner como um tom claro de azul (#BAD8FF) */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura totais do contêiner, o que ajuda a evitar problemas de dimensionamento */
+}
+
+.borda-esquerda {
+  width: 350px; /* Define a largura da borda à esquerda do contêiner como 350 pixels */
+  height: 100%; /* Define a altura da borda para ocupar 100% da altura do contêiner pai */
+  background-color: #bad8ff; /* Define a cor de fundo da borda como o mesmo tom claro de azul (#BAD8FF) usado no contêiner */
+  padding: 20px; /* Adiciona 20 pixels de espaçamento interno ao redor do conteúdo da borda */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura totais da borda */
+  display: flex; /* Define a borda como um elemento flexível, permitindo o alinhamento flexível de seu conteúdo interno */
+  flex-direction: column; /* Alinha o conteúdo interno verticalmente em uma coluna */
+  justify-content: center; /* Centraliza verticalmente o conteúdo interno da borda */
+  z-index: 1; /* Define o nível de empilhamento da borda; valores maiores são exibidos acima de valores menores */
+}
+
+.texto-na-borda {
+  color: #06377e; /* Define a cor do texto como um tom escuro de azul (#06377E) */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  font-size: 16px; /* Define o tamanho da fonte do texto como 16 pixels */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Define uma lista de fontes para o texto, começando pela fonte do sistema do usuário e indo para fontes genéricas */
+}
+
+.texto-na-borda h1 {
+  font-size: 40px; /* Define o tamanho da fonte do título (h1) como 40 pixels */
+  margin: 0; /* Remove a margem padrão ao redor do título */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Define a mesma lista de fontes para o título (h1) */
+}
+
+.texto-na-borda p {
+  font-size: 1em; /* Define o tamanho da fonte do parágrafo em relação ao tamanho da fonte do pai. `1em` significa que o tamanho será igual ao tamanho da fonte do pai */
+  margin: 10px 0; /* Define uma margem de 10 pixels acima e abaixo do parágrafo, adicionando espaçamento vertical */
+}
+
+.ler-mais {
+  display: inline-block; /* Define o link como um bloco em linha, permitindo definir dimensões e espaçamentos */
+  margin-top: 10px; /* Define uma margem superior de 10 pixels para criar espaçamento acima do link */
+  padding: 10px 50px; /* Adiciona 10 pixels de espaçamento interno vertical e 50 pixels de espaçamento interno horizontal ao redor do texto do link */
+  color: white; /* Define a cor do texto do link como branca */
+  background-color: #06377e; /* Define a cor de fundo do link como um tom escuro de azul (#06377E) */
+  text-decoration: none; /* Remove o sublinhado do link */
+  border-radius: 10px; /* Adiciona bordas arredondadas de 10 pixels ao link */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Define a mesma lista de fontes para o link */
+}
+
+.ler-mais:hover {
+  background-color: #0056b3; /* Define a cor de fundo do link quando o mouse passa sobre ele, alterando para um tom mais escuro de azul (#0056b3) */
+}
+
+.imagem-conteiner img {
+  width: 100%; /* Faz com que a imagem preencha toda a largura disponível dentro do contêiner */
+  height: 100%; /* Faz com que a imagem preencha toda a altura disponível dentro do contêiner */
+  object-fit: cover; /* Ajusta a imagem para cobrir completamente o contêiner, sem distorção, mas pode cortar partes da imagem */
+  display: block; /* Remove o espaço em branco abaixo da imagem, que é um comportamento padrão dos elementos inline */
+  border-top-left-radius: 150px; /* Adiciona um arredondamento de 150 pixels ao canto superior esquerdo da imagem */
+  border-bottom-left-radius: 150px; /* Adiciona um arredondamento de 150 pixels ao canto inferior esquerdo da imagem */
+  box-shadow: 0 0 15px 5px rgba(81, 174, 202, 0.5); /* Adiciona uma sombra ao redor da imagem com 15 pixels de desfoque e 5 pixels de expansão, com uma cor azul clara e opacidade de 0.5 */
+}
+
+/* --------------------------------ESTILIZAÇÃO DA SECTION - 2 ( INÍCIO ) -------------------------- */
+
+.o-que-aprender-sec-2 {
+  text-align: center; /* Alinha o conteúdo ao centro */
+  margin: 20px auto; /* Espaçamento acima e abaixo da seção, centraliza horizontalmente */
+  margin-top: 150px;
+}
+
+.o-que-aprender-sec-2 h3 {
+  font-family: monospace; /* Fonte monospace */
+  font-size: 25px; /* Tamanho da fonte em pixels */
+  margin: 20px 0; /* Espaço acima e abaixo do título */
+  color: #ffffff; /* Cor do texto */
+  position: relative; /* Necessário para posicionar a borda */
+  display: inline-block; /* Faz com que o título se comporte como um bloco em linha */
+  padding: 0 20px; /* Espaço interno ao redor do texto */
+}
+
+/* Adiciona linhas contínuas antes e depois do texto */
+.o-que-aprender-sec-2 h3::before,
+.o-que-aprender-sec-2 h3::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px; /* Altura da linha contínua */
+  background-color: rgb(255, 255, 255); /* Cor da linha contínua */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação ao texto */
+}
+
+.o-que-aprender-sec-2 h3::before {
+  left: -75%; /* Linha à esquerda do texto */
+  width: 75%; /* Largura da linha antes do texto */
+}
+
+.o-que-aprender-sec-2 h3::after {
+  right: -75%; /* Linha à direita do texto */
+  width: 75%; /* Largura da linha depois do texto */
+}
+
+/* Parte dos ( NÚMEROS - PASSO A PASSO ) da SECTION2*/
+
+/* Estilo para o contêiner redondo que envolve cada número */
+.numero-redondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Faz o contêiner ser redondo */
+  background-color: #e0dede; /* Cor de fundo da esfera */
+  width: 260px; /* Tamanho fixo do contêiner redondo */
+  height: 270px; /* Tamanho fixo do contêiner redondo */
+  position: relative; /* Para posicionamento dos números dentro */
+  margin: 0; /* Remove margens */
+  box-shadow: 0 0 40px rgba(76, 76, 76, 0.3);
+}
+
+/* Estilo para os números */
+/* Estilo para o contêiner que agrupa números e descrições */
+.numeros-e-paragrafos {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 230px; /* Espaçamento entre os grupos de números e parágrafos */
+  padding: 20px 0; /* Espaço acima e abaixo da div */
+}
+
+/* Estilo para cada grupo de número e descrição */
+.numero-e-descricao {
+  display: flex;
+  flex-direction: column; /* Alinha número e descrição verticalmente */
+  align-items: center; /* Centraliza o número e descrição horizontalmente */
+  text-align: center; /* Centraliza o texto do parágrafo */
+}
+
+/* Estilo para o contêiner redondo que envolve cada número */
+.numero-redondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Faz o contêiner ser redondo */
+  background-color: #f0f0f0; /* Cor de fundo da esfera */
+  width: 270px; /* Tamanho fixo do contêiner redondo */
+  height: 272px; /* Tamanho fixo do contêiner redondo */
+  position: relative; /* Para posicionamento dos números dentro */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra expansiva e suave */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilo para os números dentro do contêiner redondo */
+.numero-redondo h3 {
+  font-family: "Mplus1p", sans-serif; /* Fonte Mplus1p */
+  font-weight: 800; /* Extrabold */
+  font-size: 230px; /* Tamanho da fonte ajustado para caber dentro da esfera */
+  margin: 0; /* Remove margens padrão */
+  color: inherit; /* Faz com que a cor do número herde a cor do contêiner */
+}
+
+/* Estilos específicos para cada número */
+.numero1 h3 {
+  color: rgba(10, 207, 131, 0.5); /* Verde com opacidade de 50% */
+}
+
+.numero2 h3 {
+  color: rgba(255, 101, 101, 0.5); /* Vermelho com opacidade de 50% */
+}
+
+.numero3 h3 {
+  color: rgba(10, 102, 194, 0.5); /* Azul com opacidade de 50% */
+}
+
+/* Estilo para os parágrafos abaixo dos números */
+.descricao {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Fonte Montserrat */
+  font-weight: 700; /* Negrito */
+  color: #ffffff; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte ajustável */
+  margin: 40px 0 0; /* Margem superior para separar do número */
+  max-width: 320px; /* Limita a largura máxima do parágrafo */
+}
+
+.section2-botao-aluno {
+  display: inline-block;
+  padding: 20px 60px; /* Espaçamento interno do botão */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Fonte Montserrat */
+  font-weight: 700; /* Negrito */
+  color: #ffffff; /* Cor do texto */
+  background-color: #06377e; /* Cor de fundo do botão */
+  text-decoration: none; /* Remove o sublinhado */
+  border-radius: 16px; /* Bordas arredondadas */
+  box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.4); /* Aumenta a sombra para torná-la mais aparente */
+
+  margin: 40px 0; /* Margem superior para separar do conteúdo acima */
+}
+
+.link-aluno-section {
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  align-items: center; /* Alinha o botão verticalmente */
+  padding: 20px 0; /* Espaço acima e abaixo do botão */
+}
+
+/* Efeito de hover para o botão de ser aluno */
+.section2-botao-aluno:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/*Section 3 Estilização */
+/* Estilo para a seção "Nossos cursos" */
+.titulos-nossos-cursos {
+  text-align: center; /* Alinha o conteúdo ao centro */
+  margin: 20px auto; /* Espaçamento acima e abaixo da seção, centraliza horizontalmente */
+  margin-top: 150px; /* Espaço superior específico */
+}
+
+.titulos-nossos-cursos h3 {
+  font-family: monospace; /* Fonte monospace */
+  font-size: 25px; /* Tamanho da fonte em pixels */
+  margin: 20px 0; /* Espaço acima e abaixo do título */
+  color: #ffffff; /* Cor do texto */
+  position: relative; /* Necessário para posicionar a borda */
+  display: inline-block; /* Faz com que o título se comporte como um bloco em linha */
+  padding: 0 20px; /* Espaço interno ao redor do texto */
+}
+
+/* Adiciona linhas contínuas antes e depois do texto na seção "Nossos cursos" */
+.titulos-nossos-cursos h3::before,
+.titulos-nossos-cursos h3::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Posiciona verticalmente no meio */
+  height: 2px; /* Altura da linha contínua */
+  background-color: rgb(255, 255, 255); /* Cor da linha contínua */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação ao texto */
+}
+
+/* Ajuste de largura para garantir que a linha fique igual à da seção anterior */
+.titulos-nossos-cursos h3::before {
+  left: -130%; /* Linha à esquerda do texto */
+  width: 130%; /* Largura da linha antes do texto ajustada para manter proporção */
+}
+
+.titulos-nossos-cursos h3::after {
+  right: -130%; /* Linha à direita do texto */
+  width: 130%; /* Largura da linha depois do texto ajustada para manter proporção */
+}
+/* Parte dos CARDS SESSÃO 3 --------------------------- */
+
+/* Parte dos CARDS SESSÃO 3 --------------------------- */
+
+.container {
+  display: flex;
+  justify-content: center; /* Alinha os cards à esquerda */
+  flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+  margin: 60px; /* Margem externa do contêiner */
+  gap: 20px;
+}
+
+.card {
+  background-color: rgb(156, 199, 255); /* Cor de fundo do card */
+  border: 1px solid #ccc; /* Borda do card */
+  border-radius: 8px; /* Cantos arredondados */
+
+  /* Ajustado: Reduzindo a largura do card para permitir mais espaço horizontal */
+  width: 390px; /* Largura do card ajustada para 390px */
+  border-radius: 30px;
+
+  margin: 5px; /* Margem entre os cards reduzida para 5px */
+  padding: 15px; /* Espaço interno do card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra do card */
+  display: flex; /* Permite uma organização flexível */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  box-shadow: 0 0 40px rgba(76, 76, 76, 0.3);
+}
+
+.card img {
+  width: 100%; /* Imagem ocupa toda a largura do card */
+  border-radius: 8px 8px 0 0; /* Arredondamento no topo da imagem */
+}
+
+.card h2 {
+  font-size: 1.5em; /* Tamanho da fonte do título */
+  margin: 10px 0; /* Margem acima e abaixo do título */
+  color: white;
+}
+
+.card ul {
+  padding-left: 20px; /* Mantém os pontos visíveis com um recuo */
+  margin: 15px 0; /* Margem acima e abaixo da lista */
+  color: white;
+}
+
+.card ul li {
+  margin: 5px 0; /* Margem entre os itens da lista */
+}
+
+.saber-mais {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: inline-block; /* Permite o uso de margens e padding */
+  margin-top: 15px; /* Espaço acima do botão */
+  width: 136.07px; /* Largura do botão */
+  height: 25.43px; /* Altura do botão */
+  background-color: #06377e; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  text-decoration: none; /* Remove sublinhado do link */
+  border-radius: 30px; /* Cantos arredondados do botão */
+  text-align: center; /* Centraliza o texto do botão */
+  line-height: 25.43px; /* Centraliza verticalmente o texto */
+
+  margin: 15px auto 0; /* Margens verticais: 15px em cima, auto nas laterais para centralizar */
+  font-size: 13.78px; /* Ajustado: unidade 'px' adicionada */
+}
+
+.saber-mais:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Consultas de mídia para dispositivos menores */
+@media (max-width: 768px) {
+  .card {
+    width: 80%; /* Aumenta a largura do card em telas menores */
+  }
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px; /* Ajusta o padding para se ajustar ao tamanho fixo */
+  }
+
+  .nav-menu ul {
+    flex-direction: row; /* Mantém os itens da lista horizontalmente */
+    white-space: nowrap; /* Impede a quebra de linha automática */
+    overflow-x: auto; /* Permite rolagem horizontal se necessário */
+  }
+
+  .entrada-links {
+    margin-top: 10px; /* Adiciona espaço acima dos links */
+  }
+
+  .entrada-links a {
+    margin-left: 15px; /* Ajusta a margem esquerda para se ajustar melhor */
+    padding: 5px 10px; /* Ajusta o padding dos links */
+  }
+}
+
+/* Consultas de mídia para tablets em orientação vertical e dispositivos menores */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Mantém o padding fixo */
+  }
+
+  .nav-menu ul {
+    flex-direction: column; /* Empilha a lista verticalmente */
+    overflow: hidden; /* Oculta qualquer conteúdo que exceda o contêiner */
+    display: none; /* Oculta a lista por padrão */
+  }
+
+  .nav-menu.show {
+    display: flex; /* Mostra a lista quando ativada */
+  }
+
+  .nav-menu li {
+    margin: 10px 0; /* Adiciona espaço vertical entre os itens */
+  }
+
+  .entrada-links {
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 10px;
+  }
+
+  .entrada-links a {
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-bottom: 10px; /* Adiciona espaço entre os links */
+  }
+}
+
+/* Consultas de mídia para dispositivos muito pequenos, como telefones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px; /* Reduz o padding */
+  }
+
+  .logo img {
+    max-height: 40px; /* Reduz a altura da logo */
+  }
+
+  .nav-menu ul {
+    flex-direction: column; /* Empilha a lista verticalmente */
+    display: none; /* Oculta a lista por padrão */
+  }
+
+  .nav-menu.show {
+    display: flex; /* Mostra a lista quando ativada */
+  }
+
+  .nav-menu li {
+    margin: 5px 0; /* Reduz o espaço entre os itens */
+  }
+
+  .entrada-links {
+    flex-direction: column; /* Empilha os links verticalmente */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 5px;
+  }
+
+  .entrada-links a {
+    margin-left: 0; /* Remove a margem esquerda */
+    margin-bottom: 5px; /* Reduz o espaço entre os links */
+  }
+}
+
+/*Section 4 Estilização */
+/* Estilo para a seção "Nosso Time" */
+
+/* Alinhamento do título centralizado e espaçamento */
+.titulos-nosso-time {
+  text-align: center; /* Alinha o conteúdo ao centro */
+  margin: 20px auto; /* Espaçamento acima e abaixo da seção, centraliza horizontalmente */
+  margin-top: 100px; /* Espaço superior específico */
+}
+
+/* Estilo do título */
+.titulos-nosso-time h3 {
+  font-family: monospace; /* Define a fonte como monospace */
+  font-size: 25px; /* Define o tamanho da fonte */
+  margin: 20px 0; /* Espaçamento acima e abaixo do título */
+  color: #ffffff; /* Define a cor do texto */
+  position: relative; /* Necessário para posicionar os pseudo-elementos (::before e ::after) */
+  display: inline-block; /* Faz com que o título se comporte como um bloco em linha */
+  padding: 0 20px; /* Espaço interno ao redor do texto */
+}
+
+/* Pseudo-elementos para criar as linhas antes e depois do título */
+.titulos-nosso-time h3::before,
+.titulos-nosso-time h3::after {
+  content: ""; /* Cria conteúdo vazio para as linhas */
+  position: absolute; /* Posicionamento absoluto para as linhas */
+  top: 50%; /* Posiciona verticalmente no meio do título */
+  height: 2px; /* Define a altura das linhas */
+  background-color: rgb(255, 255, 255); /* Cor das linhas */
+  transform: translateY(
+    -50%
+  ); /* Centraliza verticalmente em relação ao texto */
+}
+
+/* Linha à esquerda do título */
+.titulos-nosso-time h3::before {
+  left: -130%; /* Distância da linha à esquerda do texto */
+  width: 130%; /* Define a largura da linha */
+}
+
+/* Linha à direita do título */
+.titulos-nosso-time h3::after {
+  right: -130%; /* Distância da linha à direita do texto */
+  width: 130%; /* Define a largura da linha */
+}
+
+/* Reset de margens e padding, configuração padrão de box-sizing e fonte */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões dos elementos */
+  font-family: "Space Grotesk", sans-serif; /* Define a fonte padrão */
+  text-decoration: none; /* Remove o sublinhado de links */
+}
+
+/* Estilo da seção da equipe */
+.team {
+  position: relative; /* Para possibilitar o uso de elementos posicionados dentro dessa div */
+  width: 100%; /* Largura total da tela */
+  height: 100vh; /* Altura total da tela */
+  /* background: radial-gradient(
+    #281c3e,
+    #0f051d
+  ); Fundo com gradiente radial */
+  display: flex; /* Usado para centralizar conteúdo */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  flex-direction: column; /* Alinha os itens verticalmente */
+}
+
+/* Layout do conteúdo da equipe com grid */
+.team-content {
+  width: 100%; /* Largura total */
+  max-width: 1350px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  display: grid; /* Define layout em grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, auto)
+  ); /* Define colunas com largura mínima de 150px */
+  align-items: center; /* Centraliza os itens dentro das células */
+  gap: 2rem; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto dos itens */
+  margin-top: 4rem; /* Espaço superior */
+}
+
+/* Estilo das imagens da equipe */
+.team-content img {
+  width: 100%; /* Largura total da célula */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+  margin-bottom: 8px; /* Espaçamento abaixo da imagem */
+}
+
+/* Estilo dos cards da equipe */
+.box {
+  padding: 16px; /* Espaçamento interno do card */
+  background-color: rgb(110, 173, 255); /* Cor de fundo transparente */
+  border-radius: 15px; /* Bordas arredondadas */
+  transition: all 0.38s ease; /* Transição suave para animações */
+}
+
+/* Estilo do nome no card */
+.box h3 {
+  font-size: 23px; /* Tamanho da fonte do nome */
+  font-weight: 600; /* Negrito */
+  color: #ffffff; /* Cor do texto branco */
+  margin-bottom: 8px; /* Espaçamento abaixo do nome */
+}
+
+/* Estilo da função no card */
+.box h5 {
+  font-size: 15px; /* Tamanho da fonte da função */
+  font-weight: 600; /* Negrito */
+  color: #ffffff; /* Cor do texto branco */
+  margin-bottom: 15px; /* Espaçamento abaixo da função */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+/* Estilo dos ícones */
+.icons i {
+  display: inline-block; /* Alinha ícones em linha */
+  color: #020e20; /* Cor branca para os ícones */
+  font-size: 20px; /* Tamanho dos ícones */
+  margin: 0 8px; /* Espaçamento entre os ícones */
+  transition: all 0.38s ease; /* Transição suave para animação dos ícones */
+}
+
+/* Efeito de hover nos ícones */
+.icons i:hover {
+  transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+/* Efeito de hover no card */
+.box:hover {
+  transform: translateY(
+    -10px
+  ); /* Move o card 10px para cima ao passar o mouse */
+  cursor: pointer; /* Mostra que o card é clicável */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 1240px) {
+  .team {
+    width: 100%; /* Largura total */
+    height: auto; /* Ajusta a altura */
+    padding: 90px 2%; /* Espaçamento interno */
+  }
+  .center h1 {
+    font-size: 3.2rem; /* Ajusta o tamanho do título para telas menores */
+  }
+}
+
+/* Alinhamento do título centralizado e espaçamento */
+.titulos-tecnologias-destaque {
+  text-align: center; /* Alinha o conteúdo ao centro */
+  margin: 20px auto; /* Espaçamento acima e abaixo da seção, centraliza horizontalmente */
+  margin-top: 50px; /* Espaço superior específico */
+}
+
+/* Estilo do título */
+.titulos-tecnologias-destaque h3 {
+  font-family: monospace; /* Define a fonte como monospace */
+  font-size: 25px; /* Define o tamanho da fonte */
+  margin: 20px 0; /* Espaçamento acima e abaixo do título */
+  color: #ffffff; /* Define a cor do texto */
+  position: relative; /* Necessário para posicionar os pseudo-elementos (::before e ::after) */
+  display: inline-block; /* Faz com que o título se comporte como um bloco em linha */
+  padding: 0 20px; /* Espaço interno ao redor do texto */
+}
+
+/* Estilo para a seção dos ícones */
+.icones-tecnologias {
+  display: flex; /* Usa flexbox para centralização */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+.icones-tecnologias img {
+  width: 50px; /* Define um tamanho fixo para os ícones */
+  height: 50px; /* Define a altura fixa dos ícones */
+  transition: transform 0.3s ease; /* Adiciona um efeito de transição suave */
+}
+
+.icones-tecnologias img:hover {
+  transform: scale(1.1); /* Aumenta o ícone levemente ao passar o mouse */
+}
+/* FIM DA SESSÃO 4 */
+
+/* INICIO SECTION 5 - DEPOIMENTOS */
+
+.depoimentos {
+  width: 100%;
+  padding: 50px 20px;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+
+  margin: 0 auto;
+  display: flex; /* Se necessário, para flexbox */
+  flex-direction: column; /* Mantém o layout em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.depoimentos .slide {
+  padding: 40px 60px;
+  cursor: grab;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.depoimentos i {
+  font-size: 90px;
+  color: #ccc;
+  position: relative; /* Permite posicionar em relação à seção */
+  right: 300px; /* Distância da esquerda */
+}
+
+.depoimentos p.depoi-txt {
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.slide .person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.slide .person img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.slide .person p.nome-person {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.slide .person p.func-person {
+  font-size: 14px;
+}
