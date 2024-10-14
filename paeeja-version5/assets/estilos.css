@@ -9,12 +9,21 @@ algo sobre o site, como o fundo por exemplo.*/
 
 html,
 body {
-  background-color: #020e20; /* 020E20 */ /* e9e7e3 */
   margin: 0;
   padding: 0;
   width: 100%;
   max-width: 100%vw;
   height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    #000,
+    #020e20
+  ); /* Efeito gradiente de preto para azul */
+  background-attachment: fixed; /* Faz o gradiente ficar fixo durante o scroll */
 }
 
 /* CSS da Barra de navegação em si. Altere aqui para alterar algo sobre a barra */
@@ -406,13 +415,14 @@ algo aqui, irá alterar a cor do texto, ou fonte, etc desses 3 citados*/
 .card h2 {
   font-size: 1.5em; /* Tamanho da fonte do título */
   margin: 10px 0; /* Margem acima e abaixo do título */
-  color: white;
+  color: #031836;
 }
 
 .card ul {
   padding-left: 20px; /* Mantém os pontos visíveis com um recuo */
   margin: 15px 0; /* Margem acima e abaixo da lista */
-  color: white;
+  color: #031836;
+  font-weight: 400;
 }
 
 .card ul li {
@@ -422,11 +432,12 @@ algo aqui, irá alterar a cor do texto, ou fonte, etc desses 3 citados*/
 .saber-mais {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
   display: inline-block; /* Permite o uso de margens e padding */
   margin-top: 15px; /* Espaço acima do botão */
   width: 136.07px; /* Largura do botão */
   height: 25.43px; /* Altura do botão */
-  background-color: #06377e; /* Cor de fundo do botão */
+  background-color: #031836; /* Cor de fundo do botão */
   color: white; /* Cor do texto do botão */
   text-decoration: none; /* Remove sublinhado do link */
   border-radius: 30px; /* Cantos arredondados do botão */
@@ -438,7 +449,7 @@ algo aqui, irá alterar a cor do texto, ou fonte, etc desses 3 citados*/
 }
 
 .saber-mais:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  background-color: #042552; /* Cor de fundo ao passar o mouse */
 }
 
 /* Consultas de mídia para dispositivos menores */
