@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAEEJA - Cadastro</title>
+    <link rel="stylesheet" href="/assets/stylesSignUp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="imagens_paeja/Untitled design (3).ico" type="image/x-icon" />
+    <!-- API da conta Google -->
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <!-- DECODIFICAÇÃO TOKEN JWT -->
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.js"></script>
+
+    <script>
+      // fuction que lida com a resposta da credencial retornada pelo Google
+      function handleCredentialResponse(response) {
+        console.log(response); // Exibe o conteúdo do objeto "response" no console
+        const data = jwt_decode(response.credential); // Decodifica o token JWT da credencial
+        console.log(data); // Exibe os dados decodificados no console
+
+        // Atualiza os elementos de acordo com as informações do usuário
+        fullName.textContent = data.name;
+        sub.textContent = data.sub;
+      }
+
+      // Função que executada a biblioteca de autentificação da Google
+      window.onload = function () {
+        // Inicializa a biblioteca de autenticação do Google com o client_id e a função de callback
+        google.accounts.id.initialize({
+          client_id:
+            "780024008024-a284jt467h8vfuc3n01shj2f17ms5ev3.apps.googleusercontent.com", // ID Google da PAEEJA
+          callback: handleCredentialResponse, // Define a função que será chamada após a autenticação
+        });
+
+        // Atributos de personalização
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"), // O elemento onde o botão será renderizado
+          {
+            theme: "outline",
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            text: "continue_with",
+            logo_alignment: "left",
+            width: "40",
+            locale: "pt-BR",
+          } //
+        );
+
+        google.accounts.id.prompt(); // Exibe o diálogo "One Tap" para login
+      };
+    </script>
+  </head>
+
+  <body>
+    <main class="main-container-cadastro">
+      <!-- Seção de Formulário de Cadastro -->
+      <section class="form-section-cadastro">
+        <header class="form-header-cadastro">
+          <div class="container-logo-cadastro">
+            <img
+              id="img-logo-cadastro"
+              src="imagens_paeja/logo-paeeja.png"
+              alt="Logo da Paeeja"
+            />
+          </div>
+          <h1 class="form-title-cadastro">Cadastre-se</h1>
+        </header>
+
+        <!-- Formulário de Cadastro -->
+        <form
+          action="#"
+          method="post"
+          class="registration-form-cadastro"
+          onsubmit="cadastrarUsuario(event)"
+        >
+          <div class="form-group-cadastro">
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              class="form-input-cadastro"
+              placeholder="Nome Completo"
+              required
+            />
+          </div>
+          <div class="form-group-cadastro">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input-cadastro"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group-cadastro">
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              class="form-input-cadastro"
+              placeholder="Senha"
+              required
+            />
+          </div>
+          <button type="submit" class="form-submit-btn-cadastro">
+            Cadastrar
+          </button>
+        </form>
+
+        <!-- Login Social -->
+        <div class="social-login-container-cadastro">
+          <p class="social-login-text-cadastro">Ou faça login com:</p>
+          <div class="social-login-buttons-cadastro">
+            <!-- Botão para login GOOGLE -->
+            <div id="buttonDiv"></div>
+            <!-- PARAGRAFOS para mostrar no site os objetos que a google fornece do usuário que faz login -->
+            <p id="fullName"></p>
+            <p id="sub"></p>
+            <p id="given_name"></p>
+            <p id="family_name"></p>
+            <p id="verified_email"></p>
+            <p id="picture"></p>
+          </div>
+        </div>
+
+        <!-- Rodapé do Formulário -->
+        <footer class="form-footer-cadastro">
+          <p class="signup-text-cadastro">
+            Já possui uma conta?<br />
+            <a href="section-login.html" class="signup-link-cadastro"
+              >Clique aqui</a
+            >
+            para acessar.
+          </p>
+        </footer>
+      </section>
+
+      <!-- Seção de Imagem Principal -->
+      <section class="image-section-cadastro"></section>
+    </main>
+
+    <script src="js/script-login-cadastro.js"></script>
+  </body>
+</html>
