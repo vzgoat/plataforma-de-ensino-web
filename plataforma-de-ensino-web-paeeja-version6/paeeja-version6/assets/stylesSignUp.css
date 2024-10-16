@@ -1,0 +1,309 @@
+* {
+  margin: 0; /* Remove margens padrão de todos os elementos */
+  padding: 0; /* Remove espaçamentos internos padrão de todos os elementos */
+  box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura e altura */
+  font-family: "JetBrains Mono", monospace; /* Define uma fonte padrão para todos os elementos */
+}
+
+/* Estilização global do body */
+body {
+  background-color: #0d1b2a; /* Define a cor de fundo para o body */
+  color: #ffffff; /* Define a cor do texto para branco */
+}
+
+/* Contêiner principal da página de cadastro */
+.main-container-cadastro {
+  display: flex; /* Faz o conteúdo dentro do contêiner principal ficar lado a lado (seção do formulário e imagem) */
+  width: 100vw; /* Define a largura do contêiner como 100% da largura da janela */
+  height: 100vh; /* Define a altura do contêiner como 100% da altura da janela */
+}
+
+/* Estilização da seção do formulário */
+.form-section-cadastro {
+  width: 40%; /* Ocupa 40% da largura da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  padding: 40px; /* Adiciona espaço interno ao redor do conteúdo */
+  background-color: #020e20; /* Define a cor de fundo da seção do formulário */
+  display: flex; /* Usa flexbox para organizar os elementos dentro da seção */
+  flex-direction: column; /* Organiza os elementos na vertical */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+}
+
+/* Cabeçalho do formulário de cadastro */
+.form-header-cadastro {
+  display: flex; /* Flexbox para organizar elementos dentro do cabeçalho */
+  flex-direction: column; /* Organiza os elementos na vertical */
+  align-items: center; /* Centraliza o conteúdo do cabeçalho */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+/* Contêiner da logo */
+.container-logo-cadastro {
+  position: absolute; /* Posiciona a logo de forma independente dos outros elementos */
+  top: 20px; /* Coloca a logo a 20px do topo da tela */
+  left: 20px; /* Coloca a logo a 20px da esquerda da tela */
+  display: flex; /* Flexbox para organizar a logo */
+  align-items: center; /* Centraliza a logo verticalmente */
+  margin-left: 20px; /* Adiciona uma margem extra à esquerda */
+}
+
+/* Estilização da logo */
+#img-logo-cadastro {
+  width: 140px; /* Define a largura da logo */
+  height: 50px; /* Define a altura da logo */
+}
+
+/* Título do formulário */
+.form-title-cadastro {
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin-top: 10px; /* Espaço acima do título */
+  padding-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Contêiner principal do formulário */
+.registration-form-cadastro {
+  display: flex; /* Flexbox para organizar o formulário */
+  flex-direction: column; /* Organiza os campos do formulário na vertical */
+  gap: 20px; /* Espaçamento entre os campos do formulário */
+}
+
+/* Estilização dos grupos de campos do formulário */
+.form-group-cadastro {
+  display: flex; /* Flexbox para organizar os grupos de campos */
+  flex-direction: column; /* Organiza os rótulos e os inputs na vertical */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+/* Estilização dos inputs do formulário */
+.form-input-cadastro {
+  width: 368px; /* Largura dos campos de entrada */
+  height: 40px; /* Altura dos campos de entrada */
+  padding: 10px; /* Espaço interno dentro dos campos */
+  border-radius: 5px; /* Bordas arredondadas */
+  border: 1px solid #7b8ca6; /* Borda fina ao redor dos campos */
+  background-color: #ffffff; /* Cor de fundo dos campos */
+  color: #000000; /* Cor do texto dentro dos campos */
+  font-size: 16px; /* Tamanho da fonte dentro dos campos */
+}
+
+/* Estilização dos placeholders (texto dentro dos campos antes de digitar) */
+.form-input-cadastro::placeholder {
+  color: #7b8ca6; /* Cor do placeholder */
+}
+
+/* Botão de envio (submit) do formulário */
+.form-submit-btn-cadastro {
+  width: 368px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  background-color: #55679c; /* Cor de fundo do botão */
+  border: none; /* Remove bordas ao redor do botão */
+  color: white; /* Cor do texto do botão */
+  cursor: pointer; /* Mostra um ponteiro de "mãozinha" ao passar sobre o botão */
+  font-size: 1rem; /* Tamanho da fonte no botão */
+  border-radius: 5px; /* Bordas arredondadas no botão */
+  margin-top: 15px; /* Espaçamento acima do botão */
+}
+
+/* Efeito hover no botão (quando o usuário passa o mouse sobre ele) */
+.form-submit-btn-cadastro:hover {
+  background-color: #3f557a; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Contêiner do login social */
+.social-login-container-cadastro {
+  margin-top: 20px; /* Espaçamento acima da seção de login social */
+}
+
+/* Texto de login social */
+.social-login-text-cadastro {
+  text-align: center; /* Centraliza o texto de login social */
+  color: #7b8ca6; /* Cor do texto */
+  margin-bottom: 10px; /* Espaçamento abaixo do texto */
+}
+
+/* Botões de login social */
+.social-login-buttons-cadastro {
+  display: flex; /* Flexbox para organizar os botões */
+  justify-content: space-between; /* Distribui os botões com espaço entre eles */
+  width: 180px; /* Define a largura total da área dos botões */
+}
+
+/* Estilização dos botões de login social */
+.social-cadastro-btn img {
+  width: 40px; /* Largura dos ícones de login social */
+  height: 40px; /* Altura dos ícones de login social */
+  cursor: pointer; /* Mostra um ponteiro de "mãozinha" ao passar sobre o ícone */
+}
+
+/* Rodapé do formulário */
+.form-footer-cadastro {
+  margin-top: 20px; /* Espaçamento acima do rodapé */
+  text-align: center; /* Centraliza o texto do rodapé */
+}
+
+/* Texto de "não tem uma conta?" no rodapé */
+.signup-text-cadastro {
+  color: #7b8ca6; /* Cor do texto no rodapé */
+}
+
+/* Link de cadastro */
+.signup-link-cadastro {
+  color: #09c4ff; /* Cor do link de cadastro */
+  text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Efeito hover no link de cadastro */
+.signup-link-cadastro:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+}
+
+/* Seção de imagem */
+.image-section-cadastro {
+  width: 60%; /* Define a largura da seção de imagem (60% da tela) */
+  height: 100vh; /* Define a altura da seção como 100% da altura da janela */
+  background-image: url("../imagens_paeja/image8.png"); /* Imagem de fundo */
+  background-size: cover; /* Faz com que a imagem cubra toda a área da seção */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center center; /* Centraliza a imagem no meio da seção */
+}
+
+.main-container-login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Estilização da seção do formulário de login */
+.form-section-login {
+  width: 40%;
+  height: 100%;
+  padding: 40px;
+  background-color: #020e20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container-logo-login {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+#img-logo-login {
+  width: 140px;
+  height: 50px;
+}
+
+.form-title-login {
+  font-size: 24px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.registration-form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group-login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-input-login {
+  width: 368px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7b8ca6;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+}
+
+.form-input-login::placeholder {
+  color: #7b8ca6;
+}
+
+.form-submit-btn-login {
+  width: 368px;
+  height: 40px;
+  background-color: #55679c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.form-submit-btn-login:hover {
+  background-color: #3f557a;
+}
+
+.social-login-container-login {
+  margin-top: 20px;
+}
+
+.social-login-buttons-login {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.social-login-btn img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.form-footer-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-text-login {
+  color: #7b8ca6;
+}
+
+.signup-link-login {
+  color: #09c4ff;
+  text-decoration: none;
+}
+
+.signup-link-login:hover {
+  text-decoration: underline;
+}
+
+.image-section-login {
+  width: 60%;
+  height: 100vh;
+  background-image: url("../imagens_paeja/image8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Estética da mensagem de erro que sera exibida caso o usuario erre a senha ou email quando clicar no botão Entrar na section-login */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px; /* Ajusta o espaço entre a senha e o botão, se necessário */
+  margin-bottom: -20px;
+  font-weight: 700;
+}
