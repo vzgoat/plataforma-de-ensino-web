@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAEEJA</title>
+    <link rel="stylesheet" href="../assets/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800&display=swap"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="../images_paeeja/ico-paeeja.ico"
+      type="image/x-icon"
+    />
+    <!-- Importação de estilo de ícones da biblioteca RemixIcon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Preconexão com os servidores de fontes do Google para melhorar o desempenho no carregamento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Importação da fonte 'Space Grotesk' do Google Fonts com várias variações de peso -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- GOOGLE FONTES -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../assets/swiper-bundle.min.css" />
+
+    <!-- Adiciona o link para a CDN do Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <!-- DIV da logo e a navegação das barras (nav) -->
+        <div class="logo">
+          <a href="#section-home">
+            <img src="../images_paeeja/logo-paeeja.png" alt="Logo imagem" />
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="#sectionCursos">Cursos</a></li>
+            <li><a href="#nossoTime">Sobre nós</a></li>
+            <li><a href="#faleConosco">Fale Conosco</a></li>
+          </ul>
+        </nav>
+
+        <!-- Div da entrada de login -->
+        <div class="entrada-links">
+          <a href="../pages/login.html" id="botaoEntrarNav"> Entrar</a>
+          <a
+            href="../pages/register.html"
+            class="registrar-link"
+            id="botaoCadastrarNav"
+          >
+            Cadastrar</a
+          >
+          <p hidden id="nomeUsuario" class="nome-usuario-logado"></p>
+          <img
+            hidden
+            src="../icons-svg/icon2-userprofile.svg"
+            alt="icone do usuario"
+            id="iconUsuario"
+            class="icon-usuario"
+          />
+          <a
+            href="section-login.html"
+            id="botaoSair"
+            class="registrar-link"
+            onclick="sairLogin(event)"
+            style="display: none"
+            >Sair</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1 Section -->
+
+      <!-- Parágrafo para redirecionar a logo -->
+      <p id="section-home"></p>
+      <!-- POR FAVOR, NAO APAGUE!!!!!!!!!!! -->
+
+      <section id="hero">
+        <figure class="imagem-conteiner">
+          <div class="borda-esquerda">
+            <div class="texto-na-borda">
+              <h1>Tenha o seu<br />ensino<br />Na palma da<br />sua mão</h1>
+              <p>
+                Fique por dentro de tudo, <br />
+                mesmo fora da escola
+              </p>
+            </div>
+          </div>
+          <img
+            src="../images_paeeja/image-section-home.png"
+            alt="Imagem da primeira sessão"
+          />
+        </figure>
+      </section>
+
+      <!--Section 2 Início.-->
+      <section>
+        <div class="o-que-aprender-sec-2">
+          <h3>O que você irá aprender</h3>
+        </div>
+
+        <div class="numeros-e-paragrafos">
+          <div class="numero-e-descricao">
+            <div class="numero-redondo numero1">
+              <h3>1</h3>
+            </div>
+            <p class="descricao">
+              Ensino digital desde o básico ao ensino médio na palma da sua mão
+            </p>
+          </div>
+          <div class="numero-e-descricao">
+            <div class="numero-redondo numero2">
+              <h3>2</h3>
+            </div>
+            <p class="descricao">
+              Gerenciar seus próprios horários e desenvolver disciplina e
+              organização
+            </p>
+          </div>
+          <div class="numero-e-descricao">
+            <div class="numero-redondo numero3">
+              <h3>3</h3>
+            </div>
+            <p class="descricao">
+              Formação de competências digitais e tecnologias modernas
+            </p>
+          </div>
+        </div>
+
+        <!-- Novo botão adicionado -->
+        <div class="link-aluno-section">
+          <a href="#Link-ser-aluno" class="section2-botao-aluno"
+            >QUERO SER ALUNO DA PAEEJA</a
+          >
+        </div>
+      </section>
+
+      <!-- Section 3 - Início -->
+
+      <div class="titulos-nossos-cursos" id="sectionCursos">
+        <h3>Nossos cursos</h3>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <img
+            src="../images-cards-exercies/img-card.png"
+            alt="Descrição da Foto 1"
+          />
+          <h2>Matematica Básica</h2>
+          <ul>
+            <li>Adição e Subtração</li>
+            <li>Multiplicação e divisão</li>
+            <li>Noções de números inteiros e decimais</li>
+          </ul>
+          <a href="#Saber-mais-sec-3-card-1" class="saber-mais"
+            >Começar Agora</a
+          >
+        </div>
+        <div class="card">
+          <img
+            src="../images-cards-exercies/img-card-2.png"
+            alt="Descrição da Foto 2"
+          />
+          <h2>Português</h2>
+          <ul>
+            <li>Substantivo</li>
+            <li>Pronomes</li>
+            <li>Noções de números inteiros e decimais</li>
+          </ul>
+          <a href="#Saber-mais-sec-3-card-2" class="saber-mais"
+            >Começar Agora</a
+          >
+        </div>
+        <div class="card">
+          <img
+            src="../images-cards-exercies/img-card-3.png"
+            alt="Descrição da Foto 3"
+          />
+          <h2>Ciências</h2>
+          <ul>
+            <li>Números e Operações</li>
+            <li>Geometria</li>
+            <li>Dados e Probabilidade</li>
+          </ul>
+          <a href="#Saber-mais-sec-3-card-3" class="saber-mais"
+            >Começar Agora</a
+          >
+        </div>
+      </div>
+    </main>
+    <!-- Section 4: Início da section "Nosso Time" -->
+
+    <div class="titulos-nosso-time" id="nossoTime">
+      >
+      <h3>Nosso time</h3>
+      <!-- Cabeçalho com o título centralizado -->
+    </div>
+
+    <!-- Início da div que contém o grid de cards de membros do time -->
+    <div class="team-content">
+      <!-- Cada div "box" representa um card com informações de um membro do time -->
+      <div class="box">
+        <img src="../images_paeeja/igor-icon.png" />
+        <!-- Imagem do membro do time -->
+        <h3>Igor Vasconcelos</h3>
+        <!-- Nome do membro -->
+        <h5>Desenvolvedor Web e Designer</h5>
+        <!-- Cargo ou função -->
+
+        <!-- Ícones de redes sociais com links -->
+        <div class="icons">
+          <a href="https://github.com/vzgoat" target="_blank"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <!-- Ícone do LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/igor-vasconcellos"
+            target="_blank"
+            ><i class="ri-linkedin-box-fill"></i
+          ></a>
+          <!-- Ícone do Instagram -->
+          <a href="https://www.instagram.com/vzgoat" target="_blank"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+        </div>
+      </div>
+
+      <!-- Repetição da estrutura para cada membro do time -->
+      <div class="box">
+        <img src="../images_paeeja/leonardo-icon.png" />
+        <h3>Leonardo Bacelar</h3>
+        <h5>Desenvolvedor Web</h5>
+        <div class="icons">
+          <a href="https://github.com/LeonardoBCL" target="_blank"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <!-- Ícone do LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/leonardo-bacelar-9394ba325/"
+            target="_blank"
+            ><i class="ri-linkedin-box-fill"></i
+          ></a>
+          <!-- Ícone do Instagram -->
+          <a href="https://www.instagram.com/leoo.bcl" target="_blank"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="../images_paeeja/saulo-icon.png" />
+        <h3>Saulo de Oliveira</h3>
+        <h5>Desenvolvedor BackEnd</h5>
+        <div class="icons">
+          <a href="https://github.com/SauloOliveiraDev" target="_blank"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <!-- Ícone do LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/saulo-de-oliveira-5295692b8/"
+            target="_blank"
+            ><i class="ri-linkedin-box-fill"></i
+          ></a>
+          <!-- Ícone do Instagram -->
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="../images_paeeja/ravi-icon.png" />
+        <h3>Ravi Mariani</h3>
+        <h5>CEO</h5>
+        <!-- Ícones de redes sociais com links -->
+        <div class="icons">
+          <a href="https://github.com/RaviMariani" target="_blank"
+            ><i class="ri-github-fill"></i
+          ></a>
+          <!-- Ícone do LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/ravi-mariani-75146231b/"
+            target="_blank"
+            ><i class="ri-linkedin-box-fill"></i
+          ></a>
+          <!-- Ícone do Instagram -->
+          <a href="https://www.instagram.com/ravi.bmp" target="_blank"
+            ><i class="ri-instagram-fill"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="titulos-tecnologias-destaque">
+      <!-- Cabeçalho com o título centralizado -->
+      <h3>Tecnologias em Destaque</h3>
+      <div class="icones-tecnologias">
+        <img src="../icons-svg/skill-icons_html.svg" alt="HTML Icon" />
+        <img src="../icons-svg/skill-icons_css.svg" alt="CSS Icon" />
+        <img
+          src="../icons-svg/skill-icons_javascript.svg"
+          alt="JavaScript Icon"
+        />
+        <img src="../icons-svg/skill-icons_figma.svg" alt="Figma Icon" />
+      </div>
+    </div>
+
+    <!-- Fim da section 4 -->
+
+    <!-- Seção 5: Início da section "Depoimentos" -->
+
+    <section class="depoimentos mySwiper">
+      <div class="depoimentos-container swiper-wrapper">
+        <div class="slide swiper-slide">
+          <i class="bi bi-quote"></i>
+          <p class="depoi-txt">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            reiciendis magni ducimus omnis aliquam neque, optio officia nostrum
+            aut quos vero inventore ipsam in sunt alias. Illo perspiciatis
+            beatae totam?
+          </p>
+          <div class="person">
+            <img
+              src="../images-depoiment/icon-person1.png"
+              alt="Depoimento de Pessoa"
+            />
+            <div class="info-person">
+              <p class="nome-person">Amanda Fontes</p>
+              <p class="func-person">Web Developer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide swiper-slide">
+          <i class="bi bi-quote"></i>
+          <p class="depoi-txt">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            reiciendis magni ducimus omnis aliquam neque, optio officia nostrum
+            aut quos vero inventore ipsam in sunt alias. Illo perspiciatis
+            beatae totam?
+          </p>
+          <div class="person">
+            <img
+              src="../images-depoiment/icon-person2.png"
+              alt="Depoimento de Pessoa"
+            />
+            <div class="info-person">
+              <p class="nome-person">Paulo Lima</p>
+              <p class="func-person">Teacher</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide swiper-slide">
+          <i class="bi bi-quote"></i>
+          <p class="depoi-txt">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            reiciendis magni ducimus omnis aliquam neque, optio officia nostrum
+            aut quos vero inventore ipsam in sunt alias. Illo perspiciatis
+            beatae totam?
+          </p>
+          <div class="person">
+            <img
+              src="../images-depoiment/icon-person3.png"
+              alt="Depoimento de Pessoa"
+            />
+            <div class="info-person">
+              <p class="nome-person">Carla Ribeiro</p>
+              <p class="func-person">IT Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div id="location">
+        <div class="container-location">
+          <h2>Localização</h2>
+          <p class="p-local">Avenida do Sol, 1234, Estrela Nova - 12345-678</p>
+        </div>
+        <div class="container-copyright">
+          <h2>Siga-nos</h2>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </div>
+          <p class="p-copy">&copy; 2024 Política de privacidade</p>
+        </div>
+      </div>
+
+      <div id="contact">
+        <div class="container-contact">
+          <h2 id="faleConosco">Formulário de contato</h2>
+          <form action="#" method="post">
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Escreva seu nome"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Escreva seu email"
+              required
+            />
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Sua mensagem..."
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/swiper-bundle.min.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/script-login-cadastro.js" defer></script>
+  </body>
+</html>
