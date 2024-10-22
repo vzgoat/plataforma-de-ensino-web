@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAEEJA - Login</title>
+    <link rel="stylesheet" href="../assets/stylesSignUp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../images_paeeja/ico-paeeja.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <main class="main-container-login">
+      <!-- Seção principal do formulário -->
+      <section class="form-section-login">
+        <header class="form-header-login">
+          <div class="container-logo-login">
+            <a href="../pages/home.html">
+              <img
+                src="../images_paeeja/logo-paeeja.png"
+                alt="Logo da Paeeja"
+                id="img-logo-login"
+              />
+            </a>
+          </div>
+          <h1 class="form-title-login">Faça Login</h1>
+          <h2 class="form-title-login">ou Cadastre-se</h2>
+        </header>
+
+        <!-- Formulário de login -->
+        <form
+          action="#"
+          method="post"
+          class="registration-form-login"
+          onsubmit="loginUsuario(event)"
+        >
+          <div class="form-group-login">
+            <input
+              type="email"
+              id="email-login"
+              name="email"
+              class="form-input-login"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="form-group-login">
+            <input
+              type="password"
+              id="senha-login"
+              name="senha"
+              class="form-input-login"
+              placeholder="Senha"
+              required
+            />
+            <p>
+              <br />
+              <a href="#" class="signup-link-login">Esqueceu a senha?</a>
+            </p>
+          </div>
+          <p id="errormsg" class="error-message" hidden>
+            Email ou senha incorretos!
+          </p>
+          <button type="submit" class="form-submit-btn-login">Entrar</button>
+        </form>
+
+        <!-- Seção de login social -->
+        <div class="social-login-container-login">
+          <div class="social-login-buttons-login">
+            <a href="#" class="social-login-btn-login">
+              <img
+                src="../icons-svg/logos_google.svg"
+                alt="Login com Google"
+              />
+            </a>
+            <a href="#" class="social-login-btn-login">
+              <img
+                src="../icons-svg/logos_facebook.svg"
+                alt="Login com Facebook"
+              />
+            </a>
+            <a href="#" class="social-login-btn-login">
+              <img
+                src="../icons-svg/logos_linkedin.svg"
+                alt="Login com LinkedIn"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Rodapé do formulário -->
+        <footer class="form-footer-login">
+          <p class="signup-text-login">
+            Não possui uma conta?<br />
+            <a href="../pages/register.html" class="signup-link-login"
+              >Clique aqui</a
+            >
+            para se cadastrar
+          </p>
+        </footer>
+      </section>
+
+      <!-- Seção de imagem do login -->
+      <section class="image-section-login"></section>
+    </main>
+    <script src="../js/script-login-cadastro.js" defer></script>
+  </body>
+</html>
